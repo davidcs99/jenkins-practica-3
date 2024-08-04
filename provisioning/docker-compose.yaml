@@ -8,7 +8,9 @@ volumes:
 
 services:
   jenkins:
-    image: jenkins/jenkins:lts
+    image: jenkins/jenkins:lts 
+    user: root
+    privileged: true
     volumes:
        - jenkins_data:/var/jenkins_home
     networks:
